@@ -52,7 +52,19 @@
             max-width: 700px;
             margin: 20px auto;
         }
-        
+
+		.header .container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.header .button-container {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+		}
+       
 		.button-container {
 			display: flex;
 			justify-content: center;
@@ -67,19 +79,22 @@
 			border-radius: 5px;
 			font-weight: bold;
 			transition: all 0.3s ease;
-			min-width: 180px; /* Set a minimum width */
+			min-width: 180px;
+			max-width: 220px;
 			text-align: center;
 			box-sizing: border-box;
 		}
-        
+
 		.btn-primary {
 			background-color: var(--primary-color);
 			color: white;
 			border: 2px solid var(--primary-color);
-			padding: 12px 30px;
-			width: calc(100% - 4px); /* Accounts for the 2px border on each side */
-			box-sizing: border-box;
-			text-align: center;
+		}
+
+		.cta .btn-primary {
+			display: inline-block;
+			max-width: 220px;
+			margin: 0 auto;
 		}
         
         .btn-primary:hover {
@@ -292,8 +307,10 @@
         <div class="container">
             <h1><span>Forge</span> Mystery Box</h1>
             <p>Subscribe to receive a curated collection of premium 3D printed creations delivered to your door. Each box is tailored to your interests and packed with innovation.</p>
-            <a href="#pricing" class="btn btn-primary">SUBSCRIBE NOW</a>
-            <a href="#about" class="btn btn-secondary">LEARN MORE</a>
+			<div class="button-container">
+				<a href="#pricing" class="btn btn-primary">SUBSCRIBE NOW</a>
+				<a href="#about" class="btn btn-secondary">LEARN MORE</a>
+			</div>
         </div>
     </div>
     
@@ -539,7 +556,7 @@
             <div class="cta">
                 <h3>Ready to Experience the Future of 3D Printing?</h3>
                 <p>Subscribe today and receive your first Mystery Box filled with premium 3D printed creations.</p>
-                <a href="#pricing" class="btn btn-primary">GET STARTED</a>
+                <a href="#pricing" class="btn btn-primary" style="display: inline-block; max-width: 220px;">GET STARTED</a>
             </div>
         </div>
     </div>
